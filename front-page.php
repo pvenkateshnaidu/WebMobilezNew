@@ -224,6 +224,23 @@
             </div>
         </section>
     -->
+    <?php
+   $args = array(
+               'taxonomy' => 'tech-category',
+               'orderby' => 'name',
+               'order'   => 'ASC'
+           );
+
+   $cats = get_categories($args);
+
+   foreach($cats as $cat) {
+?>
+      <a href="<?php echo get_category_link( $cat->term_id ) ?>">
+           <?php echo $cat->name; ?>
+      </a>
+<?php
+   }
+?>
        
         <section class="partner_logo_area_five" >
             <div class="container">
