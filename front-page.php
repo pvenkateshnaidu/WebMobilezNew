@@ -241,7 +241,7 @@
                                    $cats = get_categories($args);
 
                                 $i=1;
-                                   foreach($cats as $cat) { $string = preg_replace('/\s+/', '', $cat->name);
+                                   foreach($cats as $cat) { $string = strtolower(preg_replace('/\s+/', '', $cat->name));
                                 ?>
                                 <li class="nav-item">
                                     <a class="nav-link active" id=<?php echo $string."-tab"; ?> data-toggle="tab" href=<?php echo "#".$string; ?> role="tab" aria-controls=<?php echo $string; ?> aria-selected="true"><?php echo $cat->name; ?></a>
