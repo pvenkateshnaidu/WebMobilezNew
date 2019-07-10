@@ -258,7 +258,27 @@
                                 ?>
                             <div class="tab-pane fade " id=<?php echo $string; ?> role="tabpanel" aria-labelledby=<?php echo $string."-tab"; ?>>
                                  <ul class="list-unstyled tech_used">
+                                    <?php 
 
+
+                                      $args = array('post_type' => 'custom_post_type',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'tech-category',
+                'field' => 'slug',
+                'terms' => $cat->slug,
+            ),
+        ),
+     );
+
+     $loop = new WP_Query($args);
+     if($loop->have_posts()) {
+        echo '<h2>'.$cat->name.'</h2>';
+
+        while($loop->have_posts()) : $loop->the_post();
+            echo '<a href="'.get_permalink().'">'.get_the_title().'</a><br>';
+        endwhile;
+     } ?>
                                     <li class="tech-icon flex-column align-content-center">
                                         <div>
                                         <img src="images/html.png" alt="">
