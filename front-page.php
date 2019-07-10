@@ -253,7 +253,10 @@
                                
                             </ul>
                             <div class="tab-content developer_tab_content">
-                            <div class="tab-pane fade " id="clientsideoptions" role="tabpanel" aria-labelledby="clientsideoptions-tab">
+
+                                <?php      foreach($cats as $cat) { $string = strtolower(preg_replace('/\s+/', '', $cat->name));
+                                ?>
+                            <div class="tab-pane fade " id=<?php echo $string; ?> role="tabpanel" aria-labelledby=<?php echo $string."-tab"; ?>>
                                  <ul class="list-unstyled tech_used">
                                     <li class="tech-icon flex-column align-content-center">
                                         <div>
@@ -261,130 +264,12 @@
                                          <p>HTML 5</p>
                                         </div>
                                     </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="https://webmobilez.com/wp-content/uploads/2019/05/css-3.png" alt="">
-                                         <p>CSS 3</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="https://webmobilez.com/wp-content/uploads/2019/05/bootstrap.png" alt="">
-                                         <p>Bootstrap 4</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="https://webmobilez.com/wp-content/uploads/2019/05/angular-1.png" alt="">
-                                         <p>Angular 6</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="https://webmobilez.com/wp-content/uploads/2019/05/react.png" alt="">
-                                         <p>React</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="https://webmobilez.com/wp-content/uploads/2019/05/vue.png" alt="">
-                                         <p>Vue JS</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="https://webmobilez.com/wp-content/uploads/2019/05/protractor.png" alt="">
-                                         <p>Protractor</p>
-                                        </div>
-                                    </li>
-                                      
-                                      <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="images/wordpress.png" alt="">
-                                         <p>Wordpress</p>
-                                        </div>
-                                    </li>
+                                 
                                 </ul> 
                                 </div>
-                                <div class="tab-pane fade" id="curl" role="tabpanel" aria-labelledby="curl-tab">
-                                    <ul class="list-unstyled">
-                                    <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;"  src="https://webmobilez.com/wp-content/uploads/2019/05/spring-boot-project-logo-1-e1535836912198.png" alt="">
-                                         <p>Spring Boot</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/spring.png" alt="">
-                                         <p>Spring Security</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/hibernate1.png" alt="">
-                                         <p>Hibernate</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/mssql.png" alt="">
-                                         <p>MySQL</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/mysql1.png" alt="">
-                                         <p>MSSQL/p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/mongo.png" alt="">
-                                         <p>MongoDB</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/5847eb8bcef1014c0b5e4851.png" alt="">
-                                         <p>CodeIgniter</p>
-                                        </div>
-                                    </li>
-                                </ul>     
-                                </div>
-                                <div class="tab-pane fade" id="resize" role="tabpanel" aria-labelledby="resize-tab">
-                                     <ul class="list-unstyled">
-                                    <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/aws.png" alt="">
-                                         <p>AWS</p>
-                                        </div>
-                                    </li>
-                                    <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="images/azureLogo.png" alt="">
-                                         <p>Azure</p>
-                                        </div>
-                                    </li>
-                                </ul> 
-                                </div>
-                                <div class="tab-pane fade" id="doctl" role="tabpanel" aria-labelledby="doctl-tab">
-                                     <ul class="list-unstyled">
+                             <?php } ?>
+                             
                                
-                                 <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/jenkins.png" alt="">
-                                         <p>Jenkins</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/Octicons-mark-github.png" alt="">
-                                         <p>GitHub</p>
-                                        </div>
-                                    </li>
-                                </ul>                                 
-                                </div>
                             </div>
                         </div>
   
