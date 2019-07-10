@@ -261,7 +261,7 @@
                                     <?php 
 
 
-                                      $args = array('post_type' => 'technologies',
+                                      $args = array('post_type' => 'technologies','order'   => 'ASC',
         'tax_query' => array(
             array(
                 'taxonomy' => 'tech-category',
@@ -275,10 +275,12 @@
      if($loop->have_posts()) {
         echo '<h2>'.$cat->name.'</h2>';
 
-        while($loop->have_posts()) : $loop->the_post(); ?>
+        while($loop->have_posts()) : $loop->the_post(); 
+$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+            ?>
            <li class="tech-icon flex-column align-content-center">
                                         <div>
-                                        <img src="images/html.png" alt="">
+                                        <img src=<?php echo esc_url($featured_img_url); ?> alt="">
                                          <p><?php echo get_the_title();?></p>
                                         </div>
                                     </li>
