@@ -27,7 +27,7 @@
                            
                             <h2 class="f_600 f_size_30"><?php echo get_field("feature_title"); ?></h2>
                             <p class="f_400">
-                             <?php echo get_field("feature_title"); ?> </p>
+                             <?php echo get_field("feature_content"); ?> </p>
                         </div>
                     </div>
                 </div>
@@ -65,8 +65,8 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="app_featured_content">
-                            <h2 class="f_p f_size_30 f_700 t_color3 l_height45 pr_70 mb-30">What We Do</h2>
-                            <p class="f_400">WebMobilez gives your business the desired standpoint and outcome by delivering effective and high quality IT services and solutions. We constantly strive to reinvent ourselves and deliver standardized solutions.we help businesses achieve exponential growth. We keep pace with the fast changing digital world and take great pride in it. We are in the process of creating a structured network to serve across industries.</b>
+                            <h2 class="f_p f_size_30 f_700 t_color3 l_height45 pr_70 mb-30"><?php echo get_field("feature2_title"); ?></h2>
+                            <p class="f_400"><?php echo get_field("feature2_content"); ?></b>
                         </p>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
             </div>
             <div class="s_service_section">
                 <div class="container">
-                    <h2 class="f_p f_size_30 l_height50 f_600 t_color text-center wow fadeInUp" data-wow-delay="0.3s">Our great services<br> Here is what you can expect from Us</h2>
+                    <h2 class="f_p f_size_30 l_height50 f_600 t_color text-center wow fadeInUp" data-wow-delay="0.3s"><?php echo get_field("services_title"); ?></h2>
                     <div class="row s_service_info mt_70">
                         <div class="col-lg-4 col-sm-6">
                             <div class="s_service_item wow fadeInLeft" data-wow-delay="0.3s">
@@ -227,7 +227,7 @@
        
         <section class="partner_logo_area_five" >
             <div class="container">
-                <h2 class="f_size_30 f_600 text-center t_color l_height45 mb_50">Technologies We use</h2>
+                <h2 class="f_size_30 f_600 text-center t_color l_height45 mb_50"><?php echo get_field("technology_title"); ?></h2>
                 <div class="developer_product_content d_product_content_two text-center p-0">
                             <ul class="nav nav-tabs develor_tab mb-30" id="myTab2" role="tablist">
                                 <li class="nav-item">
