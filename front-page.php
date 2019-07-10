@@ -253,7 +253,7 @@
                                
                             </ul>
                             <div class="tab-content developer_tab_content">
-                            <div class="tab-pane fade show active" id="ruby" role="tabpanel" aria-labelledby="ruby-tab">
+                            <div class="tab-pane fade  active" id="ClientSideOptions" role="tabpanel" aria-labelledby="ruby-tab">
                                  <ul class="list-unstyled tech_used">
                                     <li class="tech-icon flex-column align-content-center">
                                         <div>
