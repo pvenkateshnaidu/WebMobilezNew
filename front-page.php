@@ -2,8 +2,8 @@
   <section class="company_banner_area">
             <div class="parallax-effect" style="background: url(<?php echo get_template_directory_uri(); ?>/img/new/company.jpg);">
 				<video class="visible-desktop" poster="<?php echo get_template_directory_uri(); ?>/assets/web.png" autoplay loop="loop" muted>
-					 <source type="video/webm" src="<?php echo get_template_directory_uri(); ?>/images/webmobilez9.mp4" type="video/webm"></source>
-					 <source type="video/mp4" src="<?php echo get_template_directory_uri(); ?>/images/webmobilez9.mp4"></source>
+					 <source type="video/webm" src="<?php echo get_template_directory_uri(); ?>/images/<?php echo get_field("video_url_name"); ?>" type="video/webm"></source>
+					 <source type="video/mp4" src="<?php echo get_template_directory_uri(); ?>/images/<?php echo get_field("video_url_name"); ?>"></source>
 				 </video>
 			</div>
             <div class="container">
@@ -19,15 +19,15 @@
                 <div class="row feature_info">
                     <div class="col-lg-7">
                         <div class="feature_img f_img_one">
-                            <img class="wow fadeInRight" data-wow-delay="0.1s" src="<?php echo get_template_directory_uri(); ?>/images/company.jpg" alt="">                   
+                            <img class="wow fadeInRight" data-wow-delay="0.1s" src="<?php echo get_field("feature_image"); ?>" alt="">                   
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <div class="f_content">
                            
-                            <h2 class="f_600 f_size_30">Who We Are</h2>
+                            <h2 class="f_600 f_size_30"><?php echo get_field("feature_title"); ?></h2>
                             <p class="f_400">
-                              Founded in the year 2017 and headquartered at MI, USA,we are presently operating through many countries. Since then, we have been committed towards forging long term business relationships with our clients by providing consistent cutting edge technology. </p>
+                             <?php echo get_field("feature_title"); ?> </p>
                         </div>
                     </div>
                 </div>
