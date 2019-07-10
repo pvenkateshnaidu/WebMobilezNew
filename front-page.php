@@ -8,7 +8,7 @@
 			</div>
             <div class="container">
                 <div class="company_banner_content">
-                    <h2>We make it easy and affordable for your Businesses</h2>
+                    <h2><?php echo get_field(""); ?></h2>
                     <button class="about_btn btn_hover" data-target=".bd-example-modal-lg" data-toggle="modal">Start Here</button>
                 </div>
             </div>
