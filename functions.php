@@ -209,7 +209,7 @@ function tr_create_my_taxonomy() {
         'tech-category',
         'technologies',
         array(
-            'label' => __( 'Category' ),
+            'label' => __( 'Category Type' ),
             'rewrite' => array( 'slug' => 'tech-category' ),
             'hierarchical' => true,
         )

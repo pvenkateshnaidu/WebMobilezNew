@@ -224,7 +224,14 @@
             </div>
         </section>
     -->
-    <?php
+ 
+       
+        <section class="partner_logo_area_five" >
+            <div class="container">
+                <h2 class="f_size_30 f_600 text-center t_color l_height45 mb_50"><?php echo get_field("technology_title"); ?></h2>
+                <div class="developer_product_content d_product_content_two text-center p-0">
+                            <ul class="nav nav-tabs develor_tab mb-30" id="myTab2" role="tablist">
+   <?php
    $args = array(
                'taxonomy' => 'tech-category',
                'orderby' => 'name',
@@ -241,12 +248,7 @@
 <?php
    }
 ?>
-       
-        <section class="partner_logo_area_five" >
-            <div class="container">
-                <h2 class="f_size_30 f_600 text-center t_color l_height45 mb_50"><?php echo get_field("technology_title"); ?></h2>
-                <div class="developer_product_content d_product_content_two text-center p-0">
-                            <ul class="nav nav-tabs develor_tab mb-30" id="myTab2" role="tablist">
+                                
                                 <li class="nav-item">
                                     <a class="nav-link active" id="ruby-tab" data-toggle="tab" href="#ruby" role="tab" aria-controls="ruby" aria-selected="true">Client Side Options </a>
                                 </li>
