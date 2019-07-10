@@ -266,7 +266,7 @@
 
                                         );
                                              $webinarloop = new WP_Query($args);
-                                    if($webinarloop->have_posts()) : while($webinarloop->have_posts()):                               
+                                    if($webinarloop->have_posts()) { while($webinarloop->have_posts()){                               
                                         ?> 
                                     <li class="tech-icon flex-column align-content-center">
                                         <div>
@@ -274,7 +274,8 @@
                                          <p>HTML 5</p>
                                         </div>
                                     </li>
-                                 <?php endwhile; endif; //end the custom post_type loop 
+                                 <?php } }
+                                  //end the custom post_type loop 
                                  ?>
                                 </ul> 
                                 </div>
