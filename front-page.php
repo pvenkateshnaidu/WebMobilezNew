@@ -244,7 +244,7 @@
                                    foreach($cats as $cat) { $string = strtolower(preg_replace('/\s+/', '', $cat->name));
                                 ?>
                                 <li class="nav-item">
-                                    <a class=<?php if($i==1) { echo "active nav-link"; } else{ echo "nav-link" } ?> id=<?php echo $string."-tab"; ?> data-toggle="tab" href=<?php echo "#".$string; ?> role="tab" aria-controls=<?php echo $string; ?> aria-selected="false"><?php echo $cat->name; ?></a>
+                                    <a class=<?php if($i==1) { echo "active nav-link"; } else { echo "nav-link"; } ?> id=<?php echo $string."-tab"; ?> data-toggle="tab" href=<?php echo "#".$string; ?> role="tab" aria-controls=<?php echo $string; ?> aria-selected="false"><?php echo $cat->name; ?></a>
                                 </li>
                                                                    
                                     <?php $i++;
