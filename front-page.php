@@ -275,16 +275,17 @@
      if($loop->have_posts()) {
         echo '<h2>'.$cat->name.'</h2>';
 
-        while($loop->have_posts()) : $loop->the_post();
-            echo '<a href="'.get_permalink().'">'.get_the_title().'</a><br>';
-        endwhile;
-     } ?>
-                                    <li class="tech-icon flex-column align-content-center">
+        while($loop->have_posts()) : $loop->the_post(); ?>
+           <li class="tech-icon flex-column align-content-center">
                                         <div>
                                         <img src="images/html.png" alt="">
-                                         <p>HTML 5</p>
+                                         <p><?php echo get_the_title();?></p>
                                         </div>
                                     </li>
+            <?php 
+        endwhile;
+     } ?>
+                                    
                                 
                                 </ul> 
                                 </div>
