@@ -189,7 +189,7 @@ function custom_post_type() {
         'capability_type'     => 'page',
          
         // This is where we add taxonomies to our CPT
-        'taxonomies'          => array( 'category_type' ),
+        'taxonomies'          => array( 'topic' ),
     );
      
     // Registering your Custom Post Type
