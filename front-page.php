@@ -259,24 +259,13 @@
                             <div class="tab-pane fade " id=<?php echo $string; ?> role="tabpanel" aria-labelledby=<?php echo $string."-tab"; ?>>
                                  <ul class="list-unstyled tech_used">
 
-                                                                           <?php $args=array( 
-                                        'post_type' => 'technologies', //set the post_type to use.
-                                        'taxonomy' => 'tech-category', // set the taxonomy to use.
-                                        'term' => $cat->name, //set which term to use or comment out if not using. 
-
-                                        );
-                                             $webinarloop = new WP_Query($args);
-                                    if($webinarloop->have_posts()) { while($webinarloop->have_posts()){                               
-                                        ?> 
                                     <li class="tech-icon flex-column align-content-center">
                                         <div>
                                         <img src="images/html.png" alt="">
                                          <p>HTML 5</p>
                                         </div>
                                     </li>
-                                 <?php } }
-                                  //end the custom post_type loop 
-                                 ?>
+                                
                                 </ul> 
                                 </div>
                              <?php } ?>
