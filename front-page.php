@@ -232,25 +232,21 @@
                 <div class="developer_product_content d_product_content_two text-center p-0">
                             <ul class="nav nav-tabs develor_tab mb-30" id="myTab2" role="tablist">
    <?php
-    $args = array(
-                    'post_type'          => 'technologies' ,
-                    'show_option_all'    => '',
-                    'orderby'            => 'name',
-                    'order'              => 'ASC',
-                    'style'              => 'list',
-                    'show_count'         => 0,
-                    'hide_empty'         => 1,
-                    'use_desc_for_title' => 1,
-                    'show_option_none'   => __( '' ),
-                    'number'             => null,
-                    'echo'               => 1,
-                    'depth'              => 1,
-                    'taxonomy'           => 'tech-category',
-                    'title_li'           => ''
-                );
-                wp_list_categories( $args );
+   $args = array(
+               'taxonomy' => 'tech-category',
+               'orderby' => 'name',
+               'order'   => 'ASC',
+           );
 
-  
+   $cats = get_categories($args);
+var_dump($cats);
+   foreach($cats as $cat) {
+?>
+      <a href="<?php echo get_category_link( $cat->term_id ) ?>">
+           <?php echo $cat->name; ?>
+      </a>
+<?php
+   }
 ?>
 
                                 <li class="nav-item">
