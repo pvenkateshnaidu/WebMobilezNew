@@ -189,11 +189,11 @@ function custom_post_type() {
         'capability_type'     => 'page',
          
         // This is where we add taxonomies to our CPT
-        'taxonomies'          => array( 'topic' ),
+        'taxonomies'          => array( 'tech-category' ),
     );
      
     // Registering your Custom Post Type
-    register_post_type( 'Technologies', $args );
+    register_post_type( 'technologies', $args );
  
 }
  
@@ -203,3 +203,16 @@ function custom_post_type() {
 */
  
 add_action( 'init', 'custom_post_type', 0 );
+function tr_create_my_taxonomy() {
+
+    register_taxonomy(
+        'tech-category',
+        'technologies',
+        array(
+            'label' => __( 'Category' ),
+            'rewrite' => array( 'slug' => 'tech-category' ),
+            'hierarchical' => true,
+        )
+    );
+}
+add_action( 'init', 'tr_create_my_taxonomy' );
