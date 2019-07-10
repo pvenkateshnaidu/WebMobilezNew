@@ -243,8 +243,8 @@
                                 $i=1;
                                    foreach($cats as $cat) { $string = strtolower(preg_replace('/\s+/', '', $cat->name));
                                 ?>
-                                <li class=<?php if($i==1) echo "active"; ?><?php echo "nav-item";?> >
-                                    <a class="nav-link " id=<?php echo $string."-tab"; ?> data-toggle="tab" href=<?php echo "#".$string; ?> role="tab" aria-controls=<?php echo $string; ?> aria-selected="false"><?php echo $cat->name; ?></a>
+                                <li class="nav-item">
+                                    <a class=<?php if($i==1) echo "active"; ?><?php echo " nav-link";?> id=<?php echo $string."-tab"; ?> data-toggle="tab" href=<?php echo "#".$string; ?> role="tab" aria-controls=<?php echo $string; ?> aria-selected="false"><?php echo $cat->name; ?></a>
                                 </li>
                                                                    
                                     <?php $i++;
@@ -256,28 +256,28 @@
 
                                 <?php      foreach($cats as $cat) { $string = strtolower(preg_replace('/\s+/', '', $cat->name));
                                 ?>
-                            <div class="tab-pane fade " id=<?php echo $string; ?> role="tabpanel" aria-labelledby=<?php echo $string."-tab"; ?>>
+                            <div class="tab-pane fade show active " id=<?php echo $string; ?> role="tabpanel" aria-labelledby=<?php echo $string."-tab"; ?>>
                                  <ul class="list-unstyled tech_used">
                                     <?php 
 
 
-                                      $args = array('post_type' => 'technologies','order'   => 'ASC',
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'tech-category',
-                'field' => 'slug',
-                'terms' => $cat->slug,
-            ),
-        ),
-     );
+                                                                      $args = array('post_type' => 'technologies','order'   => 'ASC',
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'tech-category',
+                                                'field' => 'slug',
+                                                'terms' => $cat->slug,
+                                            ),
+                                        ),
+                                     );
 
-     $loop = new WP_Query($args);
-     if($loop->have_posts()) {
-        echo '<h2>'.$cat->name.'</h2>';
+                                     $loop = new WP_Query($args);
+                                     if($loop->have_posts()) {
+                                        echo '<h2>'.$cat->name.'</h2>';
 
-        while($loop->have_posts()) : $loop->the_post(); 
-$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
-            ?>
+                                        while($loop->have_posts()) : $loop->the_post(); 
+                                $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+                                            ?>
            <li class="tech-icon flex-column align-content-center">
                                         <div>
                                         <img src=<?php echo esc_url($featured_img_url); ?> alt="">
