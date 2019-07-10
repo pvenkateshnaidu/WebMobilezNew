@@ -261,7 +261,7 @@
                                     <?php 
 
 
-                                      $args = array('post_type' => 'custom_post_type',
+                                      $args = array('post_type' => 'technologies',
         'tax_query' => array(
             array(
                 'taxonomy' => 'tech-category',
