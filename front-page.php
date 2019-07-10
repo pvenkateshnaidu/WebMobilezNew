@@ -239,7 +239,7 @@
            );
 
    $cats = get_categories($args);
-
+var_dump($cats);
    foreach($cats as $cat) {
 ?>
       <a href="<?php echo get_category_link( $cat->term_id ) ?>">
@@ -248,7 +248,7 @@
 <?php
    }
 ?>
-                                
+
                                 <li class="nav-item">
                                     <a class="nav-link active" id="ruby-tab" data-toggle="tab" href="#ruby" role="tab" aria-controls="ruby" aria-selected="true">Client Side Options </a>
                                 </li>
