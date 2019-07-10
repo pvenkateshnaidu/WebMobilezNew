@@ -253,7 +253,7 @@
                                
                             </ul>
                             <div class="tab-content developer_tab_content">
-                            <div class="tab-pane fade " id="ClientSideOptions" role="tabpanel" aria-labelledby="ClientSideOptions-tab">
+                            <div class="tab-pane fade " id="clientsideoptions" role="tabpanel" aria-labelledby="clientsideoptions-tab">
                                  <ul class="list-unstyled tech_used">
                                     <li class="tech-icon flex-column align-content-center">
                                         <div>
