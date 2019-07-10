@@ -1,11 +1,11 @@
 <?php get_header(); ?>
   <section class="company_banner_area">
             <div class="parallax-effect" style="background: url(<?php echo get_template_directory_uri(); ?>/img/new/company.jpg);">
-				<video class="visible-desktop" poster="<?php echo get_template_directory_uri(); ?>/assets/web.png" autoplay loop="loop" muted>
-					 <source type="video/webm" src="<?php echo get_template_directory_uri(); ?>/images/<?php echo get_field("video_url_name"); ?>" type="video/webm"></source>
-					 <source type="video/mp4" src="<?php echo get_template_directory_uri(); ?>/images/<?php echo get_field("video_url_name"); ?>"></source>
-				 </video>
-			</div>
+                <video class="visible-desktop" poster="<?php echo get_template_directory_uri(); ?>/assets/web.png" autoplay loop="loop" muted>
+                     <source type="video/webm" src="<?php echo get_template_directory_uri(); ?>/images/<?php echo get_field("video_url_name"); ?>" type="video/webm"></source>
+                     <source type="video/mp4" src="<?php echo get_template_directory_uri(); ?>/images/<?php echo get_field("video_url_name"); ?>"></source>
+                 </video>
+            </div>
             <div class="container">
                 <div class="company_banner_content">
                     <h2><?php echo get_field("video_content"); ?></h2>
@@ -13,8 +13,8 @@
                 </div>
             </div>
         </section>
-	
-		<section class="features_area sec_pad">
+    
+        <section class="features_area sec_pad">
             <div class="container">
                 <div class="row feature_info">
                     <div class="col-lg-7">
@@ -34,8 +34,8 @@
                 
             </div>
         </section>
-	
-		<section class="app_featured_area">
+    
+        <section class="app_featured_area">
             <div class="container">
                 <div class="row flex-row-reverse app_feature_info">
                     <div class="col-lg-6">
@@ -231,39 +231,29 @@
                 <h2 class="f_size_30 f_600 text-center t_color l_height45 mb_50"><?php echo get_field("technology_title"); ?></h2>
                 <div class="developer_product_content d_product_content_two text-center p-0">
                             <ul class="nav nav-tabs develor_tab mb-30" id="myTab2" role="tablist">
-   <?php
-   $args = array(
-               'taxonomy' => 'tech-category',
-               'orderby' => 'name',
-               'order'   => 'ASC',
-           );
+                                   <?php
+                                   $args = array(
+                                               'taxonomy' => 'tech-category',
+                                               'orderby' => 'name',
+                                               'order'   => 'ASC',
+                                           );
 
-   $cats = get_categories($args);
-var_dump($cats);
-   foreach($cats as $cat) {
-?>
-      <a href="<?php echo get_category_link( $cat->term_id ) ?>">
-           <?php echo $cat->name; ?>
-      </a>
-<?php
-   }
-?>
+                                   $cats = get_categories($args);
 
+                                $i=1;
+                                   foreach($cats as $cat) { $string = preg_replace('/\s+/', '', $cat->name);
+                                ?>
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="ruby-tab" data-toggle="tab" href="#ruby" role="tab" aria-controls="ruby" aria-selected="true">Client Side Options </a>
+                                    <a class="nav-link active" id=<?php echo $string; ?>"-tab" data-toggle="tab" href="#"<?php echo $string; ?> role="tab" aria-controls=<?php echo $string; ?> aria-selected="true"><?php echo $cat->name; ?></a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="curl-tab" data-toggle="tab" href="#curl" role="tab" aria-controls="curl" aria-selected="false"> Server side options</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="resize-tab" data-toggle="tab" href="#resize" role="tab" aria-controls="resize" aria-selected="true">Deployment options</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="doctl-tab" data-toggle="tab" href="#doctl" role="tab" aria-controls="doctl" aria-selected="false">CI/CD options</a>
-                                </li>
+                                                                   
+                                    <?php $i++;
+                                       } ?>
+
+                               
                             </ul>
                             <div class="tab-content developer_tab_content">
-                                <div class="tab-pane fade show active" id="ruby" role="tabpanel" aria-labelledby="ruby-tab">
+                            <div class="tab-pane fade show active" id="ruby" role="tabpanel" aria-labelledby="ruby-tab">
                                  <ul class="list-unstyled tech_used">
                                     <li class="tech-icon flex-column align-content-center">
                                         <div>
@@ -488,7 +478,7 @@ var_dump($cats);
                 </div>
             </div>
         </section>
-	  <section class="agency_testimonial_area bg_color sec_pad">
+      <section class="agency_testimonial_area bg_color sec_pad">
         <div class="container">
             <h2 class="f_size_30 f_600 t_color3 l_height40 text-center mb_60">We've heard things like</h2>
             <div class="agency_testimonial_info">
@@ -522,5 +512,5 @@ var_dump($cats);
         </div>
     </section>
     
-	
+    
        <?php get_footer(); ?>
