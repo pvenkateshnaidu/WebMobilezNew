@@ -233,7 +233,7 @@
                             <ul class="nav nav-tabs develor_tab mb-30" id="myTab2" role="tablist">
    <?php
     $args = array(
-                    'post_type'          => 'product' ,
+                    'post_type'          => 'technologies' ,
                     'show_option_all'    => '',
                     'orderby'            => 'name',
                     'order'              => 'ASC',
